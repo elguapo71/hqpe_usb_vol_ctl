@@ -3,7 +3,7 @@ The required packages for building this app:
 
 sudo apt install -y build-essential qt5-qmake qt5-default libqt5core5a libqt5network5 libevdev-dev libbotan-2-dev
 
-Please visit signalyst.com and download the HQPlayer SDK first: \
+Please visit signalyst.com and download the HQPlayer SDK: \
 https://signalyst.com/downloads/
 
 Extract it to your home directory. Folder name should be something like 'hqp-control-*'. Enter the folder and change the 'control.pro' file name to 'control.pro.bak' since we will create a new project for it.\
