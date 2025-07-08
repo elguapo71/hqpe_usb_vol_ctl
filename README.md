@@ -1,16 +1,16 @@
 # hqpe_usb_vol_ctl
 Please visit signalyst.com and download the HQPlayer SDK first.\
-https://signalyst.com/downloads/
-Extract it to your home directory. Folder name should be something like 'hqp-control-*'. Enter the folder and change the 'control.pro' file name to 'control.pro.bak' since we will create a new project for it.
-Due to Qt5 compatibility, please edit the 'ControlInterface.cpp', find this block:
+https://signalyst.com/downloads/ \
+Extract it to your home directory. Folder name should be something like 'hqp-control-*'. Enter the folder and change the 'control.pro' file name to 'control.pro.bak' since we will create a new project for it.\
+Due to Qt5 compatibility, please edit the 'ControlInterface.cpp', find this block:\
 
-void clMeterInterface::onReadyRead() {
-    // ...
-    QByteArray meterHead(readBuffer.first(sizeHead));
-    readBuffer.remove(0, sizeHead);
-    QByteArray meterData(readBuffer.first(sizeData));
-    // ...
-}
+void clMeterInterface::onReadyRead() { \
+    // ... \
+    QByteArray meterHead(readBuffer.first(sizeHead)); \
+    readBuffer.remove(0, sizeHead); \
+    QByteArray meterData(readBuffer.first(sizeData)); \
+    // ... \
+} \
 
 Replace 'first' to 'left' like this and save:
 
