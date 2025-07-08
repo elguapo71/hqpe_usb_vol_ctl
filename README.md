@@ -10,16 +10,16 @@ void clMeterInterface::onReadyRead() { \
     readBuffer.remove(0, sizeHead); \
     QByteArray meterData(readBuffer.first(sizeData)); \
     // ... \
-} \
+} 
 
 Replace 'first' to 'left' like this and save:
 
-void clMeterInterface::onReadyRead() {
-    // ... (previous code unchanged)
-    QByteArray meterHead(readBuffer.left(sizeHead));
-    readBuffer.remove(0, sizeHead);
-    QByteArray meterData(readBuffer.left(sizeData));
-    // ... (rest of the function unchanged)
+void clMeterInterface::onReadyRead() { \
+    // ... (previous code unchanged) \
+    QByteArray meterHead(readBuffer.left(sizeHead)); \
+    readBuffer.remove(0, sizeHead); \
+    QByteArray meterData(readBuffer.left(sizeData)); \
+    // ... (rest of the function unchanged) \
 }
 
 Then put this project's 'usbvol.pro', 'VolumeController.hpp' and 'volume_controller.cpp' into the 'hqp-control-*' folder.
