@@ -1,6 +1,6 @@
 I build this app in Ubuntu Server 24. \
-The required packages for building this app: \
-sudo apt update \
+The required packages for building this app: 
+
 sudo apt install -y build-essential qt5-qmake qt5-default libqt5core5a libqt5network5 libevdev-dev libbotan-2-dev
 
 Please visit signalyst.com and download the HQPlayer SDK first: \
