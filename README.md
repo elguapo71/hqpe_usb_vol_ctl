@@ -24,44 +24,44 @@ void clMeterInterface::onReadyRead() { \
 
 Then put this project's 'usbvol.pro', 'VolumeController.hpp' and 'volume_controller.cpp' into the 'hqp-control-*' folder.
 
-make clean
-qmake
-make
+make clean \
+qmake \
+make \
 
-Application 'usbvol' will be built.
+Application 'usbvol' will be built. \
 
-Create a configuration file:
+Create a configuration file: \
 
-sudo nano /etc/default/usbvol
+sudo nano /etc/default/usbvol \
 
-put these line to usbvol file and save:
+put these line to usbvol file and save: \
 
-VENDOR_ID=0x68e
-PRODUCT_ID=0x566
-MIN_VOLUME=-60.0
-DEFAULT_VOLUME=-30.0
-MUTE_VOLUME=-60.0
-STEP_SIZE=1.0
+VENDOR_ID=0x68e \
+PRODUCT_ID=0x566 \
+MIN_VOLUME=-60.0 \
+DEFAULT_VOLUME=-30.0 \
+MUTE_VOLUME=-60.0 \
+STEP_SIZE=1.0 \
 
-Run usbvol then done.
+Run usbvol then done. \
 
-You can also create a systemd startup file:
+You can also create a systemd startup file: \
 
-sudo nano /etc/systemd/system/usbvol.service
+sudo nano /etc/systemd/system/usbvol.service \
 
-Put these into the file:
+Put these into the file: \
 
-[Unit]
-Description=USB Volume Knob Controller for HQPlayer Embedded
-After=network-online.target hqplayerd.service
-Requires=hqplayerd.service
+[Unit] \
+Description=USB Volume Knob Controller for HQPlayer Embedded \
+After=network-online.target hqplayerd.service \
+Requires=hqplayerd.service \
 
-[Service]
-ExecStart=/directory/to/usbvol
-WorkingDirectory=/directory/to/usbvol
-Restart=always
+[Service] \
+ExecStart=/directory/to/usbvol \
+WorkingDirectory=/directory/to/usbvol \
+Restart=always \
 
-[Install]
-WantedBy=multi-user.target
+[Install] \
+WantedBy=multi-user.target \
 
-And then you can use systemctl start / stop / restart the usbvol app.
+And then you can use systemctl start / stop / restart the usbvol app. \
