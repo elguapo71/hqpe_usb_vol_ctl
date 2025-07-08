@@ -48,7 +48,7 @@ DEFAULT_VOLUME=-30.0 \
 MUTE_VOLUME=-60.0 \
 STEP_SIZE=1.0
 
-Run usbvol then done.
+You can find the vendor ID and product ID thru lsusb CLI. Run usbvol then done.
 
 You can also create a systemd startup file:
 
