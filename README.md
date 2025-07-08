@@ -7,7 +7,7 @@ Please visit signalyst.com and download the HQPlayer SDK: \
 https://signalyst.com/downloads/
 
 Extract it to your home directory. Folder name should be something like 'hqp-control-*'. Enter the folder and change the 'control.pro' file name to 'control.pro.bak' since we will create a new project for it.\
-Due to Qt5 compatibility, please edit the 'ControlInterface.cpp', find this block:
+Due to Qt5 compatibility, please edit the 'ControlInterface.cpp' and find this block:
 
 void clMeterInterface::onReadyRead() { \
     // ... \
